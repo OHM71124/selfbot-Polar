@@ -3,7 +3,7 @@ const gamethumnail = require("../game.json")
 
 module.exports = {
     name: ["redeemgpo", "redeembf", "redeemkp"],
-    description: 'วิธี redeem แต่ละเกม',
+    description: "วิธี redeem แต่ละเกม | How to Redeem Key",
     async execute (message, args, color, command) {
         const lang = args[0] || "th"
 

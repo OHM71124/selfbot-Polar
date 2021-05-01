@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports = {
     name: ["howtobuy", "htb"],
-    description: 'วิธีซื้อสคริปท์',
+    description: 'วิธีซื้อสคริปท์ How to buy script',
     async execute (message, args, color, command) {
         const lang = args[0] || "th"
 

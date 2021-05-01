@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports = {
     name: ["howtoresethwid", "htrs"],
-    description: 'วิธี redeem แต่ละเกม',
+    description: 'วิธี ResetHwid แต่ละเกม | How to ResetHwid',
     async execute (message, args, color, command) {
         const lang = args[0] || "th"
 

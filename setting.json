@@ -1,5 +1,6 @@
 {
     "token" : "tokenhere",
+    "discordid": "discordidhere",
     "name" : "Self Bot",
     "version" : "1.0.0",
     "prefix" : ">"
