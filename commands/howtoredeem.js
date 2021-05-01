@@ -1,18 +1,13 @@
 const Discord = require("discord.js")
+const gamethumnail = require("../game.json")
 
 module.exports = {
     name: ["redeemgpo", "redeembf", "redeemkp"],
     description: 'วิธี redeem แต่ละเกม',
     async execute (message, args, color, command) {
-        let lang = args[0] || "th"
+        const lang = args[0] || "th"
 
-        let game = {
-            "redeemgpo": "https://t3.rbxcdn.com/df708dc2042dc8f604e63a6a5c7207ab",
-            "redeembf": "https://t0.rbxcdn.com/0f4948fe1f9d5446f2b7a1f5b833f848",
-            "redeemkp": "https://t3.rbxcdn.com/c66ddf8a03541088f8e1962dbacba128"
-        }
-
-        let title = {
+        const title = {
             "th": {
                 "title": `วิธี Redeem เกม ${command.substring("redeem".length, command.length).toUpperCase()}`,
                 "description": `\
@@ -34,7 +29,7 @@ module.exports = {
         const exampleEmbed = new Discord.RichEmbed()
             .setColor(color.blue)
             .setTitle("**" + title[lang]["title"] + "**")
-            .setThumbnail(game[command])
+            .setThumbnail(gamethumnail["game"][command])
             .setDescription(title[lang]["description"])
             // .setTimestamp()
             // .setFooter('ขอบคุณที่ใช้งานสคริปท์เรานะครับ :3', 'https://imgur.com/rpA6UP0.png');
