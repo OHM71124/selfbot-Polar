@@ -41,20 +41,16 @@ client.on('ready', () => {
 })
 
 client.on('message', async (message) => {
-    if (message.author.id != setting.discordid) return;
-    // console.log(message.author.id + " " + setting.discordid)
+    if (message.author.id == setting.discordid || setting.alloweveryone == true) {
+        if (!message.content.startsWith(prefix)) return;
+
+        const args = message.content.slice(prefix.length).split(/ +/);
+        const command = args.shift().toLowerCase();
     
-    if (!message.content.startsWith(prefix)) return;
-
-    const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
-
-    try {
-        client.commands.get(command).execute(message, args, color, command, client);
-    } catch {
-
+        try {
+            client.commands.get(command).execute(message, args, color, command, client);
+        } catch {}
     }
-
 })
 
 client.login(setting.token)
