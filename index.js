@@ -41,7 +41,7 @@ client.on('ready', () => {
 })
 
 client.on('message', async (message) => {
-    if (message.author.id != 336092453918736386) return;
+    // if (message.author.id == message.author.id) return;
 
     if (!message.content.startsWith(prefix)) return;
 
