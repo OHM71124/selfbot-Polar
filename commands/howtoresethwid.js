@@ -4,7 +4,7 @@ module.exports = {
     name: ["howtoresethwid", "htrs"],
     description: 'วิธี ResetHwid แต่ละเกม | How to ResetHwid',
     async execute (message, args, color, command) {
-        const lang = args[0] || "th"
+        const lang = args[0] == "th" || args[0] == "en" ? args[0] : "th"
 
         const title = {
             "th": {

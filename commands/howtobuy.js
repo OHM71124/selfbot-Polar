@@ -4,7 +4,7 @@ module.exports = {
     name: ["howtobuy", "htb"],
     description: 'วิธีซื้อสคริปท์ How to buy script',
     async execute (message, args, color, command) {
-        const lang = args[0] || "th"
+        const lang = args[0] == "th" || args[0] == "en" ? args[0] : "th"
 
         const title = {
             "th": {

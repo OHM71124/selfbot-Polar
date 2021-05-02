@@ -5,7 +5,7 @@ module.exports = {
     name: ["redeemgpo", "redeembf", "redeemkp"],
     description: "วิธี redeem แต่ละเกม | How to Redeem Key",
     async execute (message, args, color, command) {
-        const lang = args[0] || "th"
+        const lang = args[0] == "th" || args[0] == "en" ? args[0] : "th"
 
         const title = {
             "th": {
